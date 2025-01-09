@@ -37,7 +37,7 @@ RUN curl -o /root/QQ_3.2.15_241224_amd64_01.deb https://dldir1.qq.com/qqfile/qq/
 RUN dpkg -i /root/QQ_3.2.15_241224_amd64_01.deb && apt-get -f install -y && rm /root/QQ_3.2.15_241224_amd64_01.deb
 
 # 安装LiteLoader
-RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.10/LiteLoaderQQNT.zip \
+RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.3/LiteLoaderQQNT.zip \
     && unzip /tmp/LiteLoaderQQNT.zip -d /opt/QQ/resources/app/ \
     && rm /tmp/LiteLoaderQQNT.zip
 # 修改/opt/QQ/resources/app/package.json文件
