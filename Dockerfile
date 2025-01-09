@@ -33,11 +33,11 @@ RUN cd opt/noVNC/utils && git clone https://github.com/novnc/websockify.git
 RUN cp /opt/noVNC/vnc.html /opt/noVNC/index.html     
 
 # 安装Linux QQ
-RUN curl -o /root/linuxqq_3.1.2-13107_amd64.deb https://dldir1.qq.com/qqfile/qq/QQNT/ad5b5393/linuxqq_3.1.2-13107_amd64.deb
-RUN dpkg -i /root/linuxqq_3.1.2-13107_amd64.deb && apt-get -f install -y && rm /root/linuxqq_3.1.2-13107_amd64.deb
+RUN curl -o /root/QQ_3.2.15_241224_amd64_01.deb https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_241224_amd64_01.deb
+RUN dpkg -i /root/QQ_3.2.15_241224_amd64_01.deb && apt-get -f install -y && rm /root/QQ_3.2.15_241224_amd64_01.deb
 
 # 安装LiteLoader
-RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.3/LiteLoaderQQNT.zip \
+RUN curl -L -o /tmp/LiteLoaderQQNT.zip https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/0.5.10/LiteLoaderQQNT.zip \
     && unzip /tmp/LiteLoaderQQNT.zip -d /opt/QQ/resources/app/ \
     && rm /tmp/LiteLoaderQQNT.zip
 # 修改/opt/QQ/resources/app/package.json文件
